@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y python3 python-dev python3-dev python-p
 
 RUN chmod a+x /app/publisher.sh
 
-ENV REDIS_SERVER redis.marathon.l4lb.thisdcos.directory
+#ENV REDIS_SERVER redis.marathon.l4lb.thisdcos.directory
 ENV CHANNEL jobs
 
 # CMD source /venv/bin/activate
