@@ -26,9 +26,10 @@ RUN apt-get update && apt-get install -y python3 python-dev python3-dev python-p
     && rm -rf /usr/share/locale/*  \
     && rm -rf /var/cache/debconf/*-old  \
     && rm -rf /var/lib/apt/lists/*  \
-    && rm -rf /usr/share/doc/*
-
-RUN chmod a+x /app/publisher.sh
+    && rm -rf /usr/share/doc/* \
+    && chmod a+x /app/publisher.sh
+    
+ENTRYPOINT ["/app/publisher.sh"]    
 
 #ENV REDIS_SERVER redis.marathon.l4lb.thisdcos.directory
 ENV CHANNEL jobs
