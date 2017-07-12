@@ -1,5 +1,6 @@
 ## Synopsis
 
-Docker example for generating python project with virtualenv
+Minimal api restful implementation with flask to publish jobs in a redis database
 
-docker run -e VERSION=3.4 -e MASTER_IP=xxx cirobarradov/python-docker /app/init.sh
+curl http://hostname:5000/job_id -d "data={\"name\": \"sample\"}" -X PUT
+
